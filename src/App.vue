@@ -3,12 +3,14 @@
     <h2>My Friends</h2>
 
     <ul>
-      <li></li>
+      <friend-contact></friend-contact>
+      <friend-contact></friend-contact>
     </ul>
   </section>
 </template>
 
 <script>
+import FriendContact from './components/FriendContact.vue'
 // import HelloWorld from './components/HelloWorld.vue'
 
 // export default {
@@ -18,6 +20,7 @@
 //   }
 // }
 export default {
+  components: { FriendContact },
   data() {
     return {
       friends: [
