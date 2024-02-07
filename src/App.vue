@@ -5,8 +5,8 @@
     </header>
 
     <ul>
-      <friend-contact></friend-contact>
-      <friend-contact></friend-contact>
+      <friend-contact name="Manuel Lorenz" phone-number="0129 9869 9869" email-address="manuel@example.com"></friend-contact>
+      <friend-contact name="Julie Lorenz" phone-number="0129 9869 9869" email-address="julie@example.com"></friend-contact>
     </ul>
   </section>
 </template>
