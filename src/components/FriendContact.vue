@@ -38,16 +38,19 @@ export default {
       // }
     }
   },
+  emits: ['toggle-favorite'],
+  //   emits: {
+  //     'toggle-favorite': function (id) {
+  //       if (id) {
+  //       return true
+  //       } else {
+  //       return false
+  //     }
+  //   }
+  // },
   data() {
     return {
       detailsAreVisible: false,
-      // friend: {
-      //     id: 'manual',
-      //     name: 'Manual Lorenz',
-      //     phone: '0197 2894 2689',
-      //     email: 'manual@example.com'
-      // },
-      // friendIsFavorite: this.isFavorite
     }
   },
   methods: {
