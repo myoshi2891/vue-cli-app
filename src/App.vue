@@ -6,11 +6,15 @@
 
     <ul>
       <friend-contact 
-      v-for="friend in friends"
-      :key="friend.id"
-      :name="friend.name" 
-      :phone-number="friend.phone" 
-      :email-address="friend.email" :is-favorite="true"></friend-contact>
+        v-for="friend in friends"
+        :key="friend.id"
+        :id="friend.id"
+        :name="friend.name" 
+        :phone-number="friend.phone" 
+        :email-address="friend.email" 
+        :is-favorite="friend.isFavorite"
+        @toggle-favorite="toggleFavoriteStatus"
+        ></friend-contact>
     </ul>
   </section>
 </template>
@@ -34,15 +38,23 @@ export default {
           id: 'manual',
           name: 'Manual Lorenz',
           phone: '0197 2894 2689',
-          email: 'manual@example.com'
+          email: 'manual@example.com',
+          isFavorite: true
         },
         {
           id: 'julie',
           name: 'Julie Jones',
           phone: '0197 8784 2689',
-          email: 'julie@example.com'
+          email: 'julie@example.com',
+          isFavorite: false
         },
       ]
+    }
+  },
+  methods: {
+    toggleFavoriteStatus(friendId) {
+      const identifiedFriend = this.friends.find(friend => friend.id === friendId)
+      identifiedFriend.isFavorite = !identifiedFriend.isFavorite
     }
   }
 }
